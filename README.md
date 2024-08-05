@@ -97,17 +97,25 @@ Cobalt Strike 頂部的工具列可以快速存取 Cobalt Strike 的常用功能
 
 監聽器不僅是 Payload 的設定資訊，還是 Cobalt Strike 啟動伺服器來接收 Payload 連線的指令。監聽器包含了用戶定義的名稱、Payload 類型以及幾個特定於 Payload 的選項。
 在 Cobalt Strike 中選擇「監聽器」，將會打開一個選項卡，列出所有已配置的 Payload 和監聽器。
+
 ![image](https://github.com/user-attachments/assets/1752fb87-2fcf-4601-84db-46c3e18d3735)
 
 按下「添加」來創建新的監聽器，將會顯示「新監聽器」面板。
+
 ![image](https://github.com/user-attachments/assets/60fa1a8d-857a-406b-84ee-04b09da8ccf5)
 
 使用下拉選單選擇您想要配置的有效負載/監聽器類型之一。每種類型有不同的參數，包含以下幾種：
+
 DNS Beacon
+
 HTTP Beacon and HTTPS Beacon
+
 SMB Beacon
+
 TCP Beacon
+
 External C2
+
 Foreign Listeners
 
 ### Beacon Payload
@@ -115,23 +123,31 @@ Beacon Payload 非常靈活，支持異步和互動式通信：異步通信的�
 
 #### Payload 分類
 Cobalt Strike 的 Payloads 通常分為兩種：
+
 Stage (Stageless) Payload（無階段）
+
 Stager Payload（分階段）
+
 它們之間的區別和關係如下：
 
 Stager Payload（分階段） 是一個小型程式，通常經過手動優化的彙編程式，負責下載 Stage (Stageless) Payload（無階段），將其注入記憶體，並將執行權交給它，這個過程稱為分階段式。
+
 主要包含兩大類：一類是生成 shellcode，另一類是直接生成可執行檔案。
+
 ![image](https://github.com/user-attachments/assets/fae28126-ed58-46a1-8194-63a7e5ec97a0)
 
 針對 Windows 可執行檔案主要有兩種：
 
 Windows Executeable 對應於 Stager Payload
+
 Windows Executeable(s) 對應於 Stageless Payload
+
 ![image](https://github.com/user-attachments/assets/befc86eb-9df1-4cd9-9436-0f46a48d432b)
 
 #### 生成 Beacon
 
 首先，請建立監聽器。
+
 ![image](https://github.com/user-attachments/assets/ab5b8326-ef21-4bcc-b76e-9f52da6e1174)
 
 選擇生成 Stageless 的 exe 可執行檔案：
