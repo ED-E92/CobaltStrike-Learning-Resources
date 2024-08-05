@@ -1,3 +1,4 @@
+
 # 介紹
 官網：https://www.cobaltstrike.com
 
@@ -160,4 +161,5 @@ Windows Executeable(s) 對應於 Stageless Payload
 
 ![image](https://github.com/user-attachments/assets/34d6e95b-a00d-43e6-b430-d8a1c826de51)
 
+# 請勿用於任何非法用途，僅供學習和研究使用。
 
