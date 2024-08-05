@@ -53,7 +53,7 @@ Cobalt Strike 使用 C/S 架構，客戶端會連接到團隊伺服器，而團�
 賦予執行權限：執行 chmod +x teamserver
 
 在新視窗中執行指令啟動 Teamserver：./teamserver <host> <password> [/path/to/c2.profile]
-![image](https://github.com/user-attachments/assets/f3c6999d-4afd-4b2a-b471-82a36efe2301)
+![image](https://github.com/user-attachments/assets/4a2ed2da-ff55-4450-a90f-3d753da17305)
 
 服務端啟動後，就可以開啟客戶端進行連線了。
 
@@ -68,29 +68,32 @@ Cobalt Strike 使用 C/S 架構，客戶端會連接到團隊伺服器，而團�
 
 連線成功後，即可進入客戶端介面。
 
+![image](https://github.com/user-attachments/assets/1a653d3e-7fd2-40ce-9619-1dbe76109f5d)
+
+
 # 基礎操作
 ## 功能介紹
 ### 可視化介面
 Cobalt Strike 的使用者介面分為兩部分：介面上方顯示會話或目標的視覺化，介面下方顯示與每個 Cobalt Strike 功能或會話相關的標籤。您可以點擊這兩部分之間的區域，根據需要調整它們的大小。
 
-![image](https://github.com/user-attachments/assets/df5fcec1-c466-4f84-bfef-e6a71fba0a3a)
+![image](https://github.com/user-attachments/assets/ab46b967-d551-4b01-9a70-edac5424d1f0)
 
 #### 工具列
 Cobalt Strike 頂部的工具列可以快速存取 Cobalt Strike 的常用功能。了解工具列上的按鈕，能大幅提升你使用 Cobalt Strike 的效率。
 
 |     圖示      | 作用 |
 | ------------- | ------------- |
-| ![image](https://github.com/user-attachments/assets/ec36e1d7-620f-47d4-87da-0d60ce0862a6)  | 連接到另一個團隊伺服器  |
-| ![image](https://github.com/user-attachments/assets/033a7891-d64c-4391-8f9a-25a8262fe7e8)  | 斷開與當前團隊伺服器的連線  |
-| ![image](https://github.com/user-attachments/assets/6a3f4e2e-71e1-4877-a348-1fe254791318)  | 創建和編輯 Cobalt Strike 的監聽器  |
-| ![image](https://github.com/user-attachments/assets/5465115d-321f-47ad-8c96-921f076388c8)  | 在圖表視圖中顯示會話  |
-| ![image](https://github.com/user-attachments/assets/a0a5d90d-5a57-4073-88ee-72f999b4630d)  | 在表格視圖中顯示會話  |
-| ![image](https://github.com/user-attachments/assets/fb51960f-1459-4ec1-95c4-14e60efc5d25)  | 在表格視圖中顯示目標 |
-| ![image](https://github.com/user-attachments/assets/48a96476-c9eb-4234-9b46-ed940723f3e9)  | 管理網路伺服器  |
-| ![image](https://github.com/user-attachments/assets/ff7147e6-fd06-4a11-a5ad-05195df851ce)  | 查看憑證  |
-| ![image](https://github.com/user-attachments/assets/f6decdfd-c6f8-4926-bd16-41c8dcca7020)  | 查看下載的檔案  |
-| ![image](https://github.com/user-attachments/assets/ecdcda94-470e-4460-8722-d836b2070874)  | 查看鍵盤紀錄  |
-| ![image](https://github.com/user-attachments/assets/60e2a472-9224-4545-acb9-8b27d0a97b4e)  | 查看截圖  |
+| ![image](https://github.com/user-attachments/assets/46e0e254-dcfe-4f78-bad0-95dc35eceeec)  | 連接到另一個團隊伺服器  |
+| ![image](https://github.com/user-attachments/assets/b0417e12-7061-46a7-a3ae-1e0378dc1e93)  | 斷開與當前團隊伺服器的連線  |
+| ![image](https://github.com/user-attachments/assets/17cf9f2c-3db6-4c98-9ca2-aa82c6c163bd)  | 創建和編輯 Cobalt Strike 的監聽器  |
+| ![image](https://github.com/user-attachments/assets/f78c3ed0-1e1b-4351-9b4d-26f5cb095db5)  | 在圖表視圖中顯示會話  |
+| ![image](https://github.com/user-attachments/assets/1dad743b-d314-4296-a539-5a5afeda96da)  | 在表格視圖中顯示會話  |
+| ![image](https://github.com/user-attachments/assets/8d2fa5de-ce97-41ec-ba59-d2fccd7a24d8)  | 在表格視圖中顯示目標 |
+| ![image](https://github.com/user-attachments/assets/ae76a8d0-1ca8-47bb-8e7b-4870b4cfcfa5)  | 管理網路伺服器  |
+| ![image](https://github.com/user-attachments/assets/90cea4d5-7934-4b22-9c46-b48a9e25da9a)  | 查看憑證  |
+| ![image](https://github.com/user-attachments/assets/ae48c87c-2a0c-40ef-8407-99531ade9453)  | 查看下載的檔案  |
+| ![image](https://github.com/user-attachments/assets/299f9e3c-4ae3-45f3-89dd-bda5d33ab0ba)  | 查看鍵盤紀錄  |
+| ![image](https://github.com/user-attachments/assets/b49fcd85-b1c5-4103-8c7b-7193ba94a1de)  | 查看截圖  |
 
 ### 監聽器與 Payload
 
@@ -99,11 +102,11 @@ Cobalt Strike 頂部的工具列可以快速存取 Cobalt Strike 的常用功能
 監聽器不僅是 Payload 的設定資訊，還是 Cobalt Strike 啟動伺服器來接收 Payload 連線的指令。監聽器包含了用戶定義的名稱、Payload 類型以及幾個特定於 Payload 的選項。
 在 Cobalt Strike 中選擇「監聽器」，將會打開一個選項卡，列出所有已配置的 Payload 和監聽器。
 
-![image](https://github.com/user-attachments/assets/1752fb87-2fcf-4601-84db-46c3e18d3735)
+![image](https://github.com/user-attachments/assets/94c4c442-701e-467f-b0c0-e93093a8f6d6)
 
 按下「添加」來創建新的監聽器，將會顯示「新監聽器」面板。
 
-![image](https://github.com/user-attachments/assets/60fa1a8d-857a-406b-84ee-04b09da8ccf5)
+![image](https://github.com/user-attachments/assets/c1977540-c348-4d80-8500-c6aff8a85317)
 
 使用下拉選單選擇您想要配置的有效負載/監聽器類型之一。每種類型有不同的參數，包含以下幾種：
 
@@ -135,7 +138,7 @@ Stager Payload（分階段） 是一個小型程式，通常經過手動優化�
 
 主要包含兩大類：一類是生成 shellcode，另一類是直接生成可執行檔案。
 
-![image](https://github.com/user-attachments/assets/fae28126-ed58-46a1-8194-63a7e5ec97a0)
+![image](https://github.com/user-attachments/assets/66f60815-fbb5-4e78-9b83-61ac57082e6b)
 
 針對 Windows 可執行檔案主要有兩種：
 
@@ -143,23 +146,23 @@ Windows Executeable 對應於 Stager Payload
 
 Windows Executeable(s) 對應於 Stageless Payload
 
-![image](https://github.com/user-attachments/assets/befc86eb-9df1-4cd9-9436-0f46a48d432b)
+![image](https://github.com/user-attachments/assets/fd5ea52e-efda-4832-a3ef-f26297143746)
 
 #### 生成 Beacon
 
 首先，請建立監聽器。
 
-![image](https://github.com/user-attachments/assets/ab5b8326-ef21-4bcc-b76e-9f52da6e1174)
+![image](https://github.com/user-attachments/assets/96524996-7bcf-417a-9199-50c393870556)
 
 選擇生成 Stageless 的 exe 可執行檔案：
 
-![image](https://github.com/user-attachments/assets/fe94405f-70ee-4f09-8884-49fb9f99dce7)
+![image](https://github.com/user-attachments/assets/3c5de4b6-cbfa-46e1-8ac3-e6aa2135d661)
 
 在受害者機器上執行後，即可收到 Beacon 會話。
 
 #### 執行命令：
 
-![image](https://github.com/user-attachments/assets/34d6e95b-a00d-43e6-b430-d8a1c826de51)
+![image](https://github.com/user-attachments/assets/3b816cc7-187d-467f-96a1-177a3b27e873)
 
 # 請勿用於任何非法用途，僅供學習和研究使用。
 
