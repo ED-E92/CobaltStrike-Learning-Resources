@@ -24,6 +24,7 @@ Cobalt Strike 是一個用於對手模擬和紅隊行動的平台。它提供了
 
 # 安裝與配置
 ## 環境準備
+下載連結（破解版本）：https://github.com/Ixve/Red-Team-Tools?tab=readme-ov-file （請勿用於任何非法用途，僅供學習研究使用。為了您的安全，請在虛擬機中進行測試）
 
 伺服器端：Ubuntu / CentOS
 
@@ -72,3 +73,75 @@ Cobalt Strike 使用 C/S 架構，客戶端會連接到團隊伺服器，而團�
 Cobalt Strike 的使用者介面分為兩部分：介面上方顯示會話或目標的視覺化，介面下方顯示與每個 Cobalt Strike 功能或會話相關的標籤。您可以點擊這兩部分之間的區域，根據需要調整它們的大小。
 
 ![image](https://github.com/user-attachments/assets/df5fcec1-c466-4f84-bfef-e6a71fba0a3a)
+
+#### 工具列
+Cobalt Strike 頂部的工具列可以快速存取 Cobalt Strike 的常用功能。了解工具列上的按鈕，能大幅提升你使用 Cobalt Strike 的效率。
+
+|     圖示      | 作用 |
+| ------------- | ------------- |
+| ![image](https://github.com/user-attachments/assets/ec36e1d7-620f-47d4-87da-0d60ce0862a6)  | 連接到另一個團隊伺服器  |
+| ![image](https://github.com/user-attachments/assets/033a7891-d64c-4391-8f9a-25a8262fe7e8)  | 斷開與當前團隊伺服器的連線  |
+| ![image](https://github.com/user-attachments/assets/6a3f4e2e-71e1-4877-a348-1fe254791318)  | 創建和編輯 Cobalt Strike 的監聽器  |
+| ![image](https://github.com/user-attachments/assets/5465115d-321f-47ad-8c96-921f076388c8)  | 在圖表視圖中顯示會話  |
+| ![image](https://github.com/user-attachments/assets/a0a5d90d-5a57-4073-88ee-72f999b4630d)  | 在表格視圖中顯示會話  |
+| ![image](https://github.com/user-attachments/assets/fb51960f-1459-4ec1-95c4-14e60efc5d25)  | 在表格視圖中顯示目標 |
+| ![image](https://github.com/user-attachments/assets/48a96476-c9eb-4234-9b46-ed940723f3e9)  | 管理網路伺服器  |
+| ![image](https://github.com/user-attachments/assets/ff7147e6-fd06-4a11-a5ad-05195df851ce)  | 查看憑證  |
+| ![image](https://github.com/user-attachments/assets/f6decdfd-c6f8-4926-bd16-41c8dcca7020)  | 查看下載的檔案  |
+| ![image](https://github.com/user-attachments/assets/ecdcda94-470e-4460-8722-d836b2070874)  | 查看鍵盤紀錄  |
+| ![image](https://github.com/user-attachments/assets/60e2a472-9224-4545-acb9-8b27d0a97b4e)  | 查看截圖  |
+
+### 監聽器與 Payload
+
+#### 監聽器管理
+
+監聽器不僅是 Payload 的設定資訊，還是 Cobalt Strike 啟動伺服器來接收 Payload 連線的指令。監聽器包含了用戶定義的名稱、Payload 類型以及幾個特定於 Payload 的選項。
+在 Cobalt Strike 中選擇「監聽器」，將會打開一個選項卡，列出所有已配置的 Payload 和監聽器。
+![image](https://github.com/user-attachments/assets/1752fb87-2fcf-4601-84db-46c3e18d3735)
+
+按下「添加」來創建新的監聽器，將會顯示「新監聽器」面板。
+![image](https://github.com/user-attachments/assets/60fa1a8d-857a-406b-84ee-04b09da8ccf5)
+
+使用下拉選單選擇您想要配置的有效負載/監聽器類型之一。每種類型有不同的參數，包含以下幾種：
+DNS Beacon
+HTTP Beacon and HTTPS Beacon
+SMB Beacon
+TCP Beacon
+External C2
+Foreign Listeners
+
+### Beacon Payload
+Beacon Payload 非常靈活，支持異步和互動式通信：異步通信的速度較慢，Beacon 會回傳心跳包、下載任務並進入睡眠狀態；互動式通信則是即時進行的。
+
+#### Payload 分類
+Cobalt Strike 的 Payloads 通常分為兩種：
+Stage (Stageless) Payload（無階段）
+Stager Payload（分階段）
+它們之間的區別和關係如下：
+
+Stager Payload（分階段） 是一個小型程式，通常經過手動優化的彙編程式，負責下載 Stage (Stageless) Payload（無階段），將其注入記憶體，並將執行權交給它，這個過程稱為分階段式。
+主要包含兩大類：一類是生成 shellcode，另一類是直接生成可執行檔案。
+![image](https://github.com/user-attachments/assets/fae28126-ed58-46a1-8194-63a7e5ec97a0)
+
+針對 Windows 可執行檔案主要有兩種：
+
+Windows Executeable 對應於 Stager Payload
+Windows Executeable(s) 對應於 Stageless Payload
+![image](https://github.com/user-attachments/assets/befc86eb-9df1-4cd9-9436-0f46a48d432b)
+
+#### 生成 Beacon
+
+首先，請建立監聽器。
+![image](https://github.com/user-attachments/assets/ab5b8326-ef21-4bcc-b76e-9f52da6e1174)
+
+選擇生成 Stageless 的 exe 可執行檔案：
+
+![image](https://github.com/user-attachments/assets/fe94405f-70ee-4f09-8884-49fb9f99dce7)
+
+在受害者機器上執行後，即可收到 Beacon 會話。
+
+#### 執行命令：
+
+![image](https://github.com/user-attachments/assets/34d6e95b-a00d-43e6-b430-d8a1c826de51)
+
+
