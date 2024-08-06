@@ -25,7 +25,7 @@ Cobalt Strike 是一個用於對手模擬和紅隊行動的平台。它提供了
 
 # 安裝與配置
 ## 環境準備
-下載連結（破解版本）：https://github.com/Ixve/Red-Team-Tools?tab=readme-ov-file （請勿用於任何非法用途，僅供學習研究使用。為了您的安全，請在虛擬機中進行測試）
+下載連結（破解版本）：[https://github.com/ED-E92/Red-Team-Tools] （請勿用於任何非法用途，僅供學習研究使用。為了您的安全，請在虛擬機中進行測試）
 
 伺服器端：Ubuntu / CentOS
 
